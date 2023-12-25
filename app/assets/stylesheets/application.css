@@ -1,15 +1,175 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  margin: 0;
+  padding: 0;
+  color: #243F53;
+}
+
+body {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 0.2em;
+  margin: 50px 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header-right {
+  font-size: 16px;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  margin-right: 20px;
+}
+
+header ul li:last-child {
+  margin-right: 0;
+}
+
+.article {
+  padding: 30px;
+  border-top: 1px solid #ccc;
+}
+
+.article-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.article-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.author-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.posted-date {
+  font-size: 10px;
+  color: #aaa;
+}
+
+.tags {
+  display: flex;
+  height: 25px;
+}
+
+.tag {
+  font-size: 10px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  background: #243F53;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.article-body {
+  font-size: 28px;
+  margin: 30px 0;
+}
+
+.button {
+  display: flex;
+}
+
+.edit-button, .delete-button {
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  width: 60px;
+}
+
+.edit-button {
+  margin-right: 20px;
+  border: 2px solid #3BB371;
+  color: #3BB371;
+}
+
+.delete-button {
+  border: 2px solid #DC143B;
+  color: #DC143B;
+}
+
+/* form */
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  padding: 0 20px;
+}
+
+.form-item {
+  width: 100%;
+}
+
+.form-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.form-input {
+  font-size: 16px;
+  padding: 10px;
+  border: 2px solid #243F53;
+  border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+  outline: 1px solid #18364b;
+}
+
+.submit-button {
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #243F53;
+  color: #fff;
+  padding: 10px;
+  width: 150px;
+  cursor: pointer;
+}
+
+button {
+  background: #fff;
+  font-size: 16px;
+  height: 100%;
+}

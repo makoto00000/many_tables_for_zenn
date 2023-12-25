@@ -1,0 +1,22 @@
+<h1>投稿記事一覧</h1>
+<div class="article-container">
+  <% @articles.each do |article| %>
+    <div class="article">
+      <h2 class="article-title">
+        <%# <a href="/articles/1">タイトル</a> %>
+        <%= link_to article.title, article %>
+      </h2>
+      <div class="article-bottom">
+        <div class="author">
+        <p class="author-name">test user</p>
+        <%# <p class="posted-date">2023/12/23</p> %>
+        <%= tag.p article.formatted_created_at, class:"posted-date" %>
+        </div>
+        <div class="tags">
+          <div class="tag">test1</div>
+          <div class="tag">test2</div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
