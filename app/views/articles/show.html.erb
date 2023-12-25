@@ -1,0 +1,24 @@
+<%= tag.h1 @article.title %>
+<div class="article-container">
+  <div class="article">
+    <div class="author">
+      <p class="author-name">test user</p>
+      <%= tag.p @article.formatted_created_at, class:"posted-date" %>
+    </div>
+    <%= tag.p @article.body, class:"article-body" %>
+    <div class="article-bottom">
+      <div class="tags">
+        <div class="tag">test1</div>
+        <div class="tag">test2</div>
+      </div>
+      <div class="button">
+        <%# <a href="/articles/1/edit" class="edit-button">Edit</a> %>
+        <%= link_to "Edit", edit_article_path(@article), class:"edit-button" %>
+        <%# <a href="" class="delete-button">Delete</a> %>
+        <%= link_to "Delete", @article, data: { "turbo-method": :delete, turbo_confirm: "本当に削除しますか？" }, class: "delete-button" %>
+        <%# <%= button_to "Delete", @article, method: :delete, data: { turbo_confirm: "本当に削除しますか？" }, class: "delete-button" %> 
+      </div>
+    </div>
+
+  </div>
+</div>
